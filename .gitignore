@@ -1,0 +1,14 @@
+# compiled files
+*.bin
+*.exe
+*.out
+*.class
+
+# VS Code
+.vscode/
+
+# CP helper folder
+.cph/
+
+# temp files
+tempCodeRunnerFile.*
