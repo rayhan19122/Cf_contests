@@ -15,20 +15,14 @@ void solve() {
 
     sort(b.begin(),b.end());
 
-    // for(auto u:a) cout<<u<<" ";
-    // cout<<endl;
-    // for(auto u:b) cout<<u<<" ";
-    // cout<<endl;
+    int ans=INT_MAX;
 
-
-    int ans=0;
-    int dif=0;
     for(int i=0;i<n;i++){
-        dif = abs(a[i]-b[i]);
-        ans=max(ans,dif);
+        if(a[i]!=b[i]){
+            ans=min(ans,max(a[i]-b[0],b[n-1]-a[i]));
+        }
     }
-    if(ans==0) cout<<-1<<endl;
-    else cout<<ans<<endl;
+    ans==INT_MAX?cout<<-1<<endl:cout<<ans<<endl;
 
 }
 
